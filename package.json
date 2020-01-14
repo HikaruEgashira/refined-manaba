@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@types/node": "^13.1.5",
+    "@types/tough-cookie-filestore": "^0.0.0",
+    "axios": "^0.19.1",
+    "axios-cookiejar-support": "^0.5.1",
+    "commander": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "fp-ts": "^2.4.0",
+    "newtype-ts": "^0.3.3",
+    "tough-cookie": "^3.0.1",
+    "tough-cookie-filestore": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "start": "parcel src/main.ts -t node",
+    "build": "parcel build src/main.ts -t node"
+  }
+}
