@@ -1,22 +1,20 @@
 {
   "dependencies": {
-    "@types/node": "^13.1.5",
-    "@types/tough-cookie-filestore": "^0.0.0",
     "axios": "^0.19.1",
-    "axios-cookiejar-support": "^0.5.1",
-    "commander": "^4.1.0",
     "delegate-it": "^1.1.0",
-    "dotenv": "^8.2.0",
     "fp-ts": "^2.4.0",
-    "newtype-ts": "^0.3.3",
     "select-dom": "^6.0.0"
   },
   "devDependencies": {
-    "typescript": "^3.7.4"
+    "@sindresorhus/tsconfig": "^0.7.0",
+    "@types/chrome": "^0.0.93",
+    "@types/node": "^13.1.5",
+    "parcel-plugin-web-extension": "^1.6.1",
+    "typescript": "^3.7.5",
+    "webextension-polyfill": "^0.6.0"
   },
   "scripts": {
-    "start": "parcel src/main.ts -t node",
-    "build": "parcel build src/main.ts -t node"
+    "build": "NODE_ENV=production parcel build src/manifest.json && cp -f lib/* dist"
   },
   "license": "MIT"
 }
