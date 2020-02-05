@@ -1,9 +1,6 @@
-import _axios from 'axios';
-import createClient from './createClient';
+import axios from 'axios';
 
 require('dotenv').config();
-
-const axios = createClient(process.env.SAML_URL, './cookie.json');
 
 export const fetch = async () => {
   const a = await axios.get('https://manaba.tsukuba.ac.jp/ct/home');

@@ -1,8 +1,5 @@
-import createClient from './createClient';
-
 require('dotenv').config();
-
-const axios = createClient(process.env.SAML_URL, './cookie.json');
+import axios from 'axios';
 
 export const login = async () => {
   await axios.post(process.env.LOGIN_URL, {
