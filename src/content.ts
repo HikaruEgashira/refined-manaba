@@ -1,14 +1,10 @@
 import select from 'select-dom';
 
-import { isHome } from './common/page-detect';
 import * as Home from './page/home';
 import * as Common from './page/common';
 
-Common.run();
-
-if (isHome()) {
-  Home.run();
-}
+Common.init();
+Home.init();
 
 // Add global for easier debugging
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

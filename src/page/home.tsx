@@ -4,8 +4,13 @@ import SerchBar from '../components/SearchBox';
 import { getCourse, deleteById } from '../usecase';
 
 import { appendBefore } from '../common/dom-utils';
+import { isHome } from '../common/page-detect';
 
-export const run = () => {
+export const init = () => {
+  if (isHome()) run();
+};
+
+const run = () => {
   const courses = getCourse;
 
   deleteById('#coursememo');

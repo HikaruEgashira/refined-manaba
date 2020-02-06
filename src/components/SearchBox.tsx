@@ -12,10 +12,10 @@ const Searchbox: React.FC<Props> = reactProps => {
   return (
     <Pane padding={16}>
       <Autocomplete
+        items={reactProps.items.map(i => i.name)}
         onChange={(changedItem: string) =>
           gotoCourse(reactProps.items, changedItem)
         }
-        items={reactProps.items.map(i => i.name)}
       >
         {props => {
           const { getInputProps, getRef, inputValue, openMenu } = props;

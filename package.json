@@ -24,7 +24,8 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development parcel watch --no-hmr src/manifest.json",
-    "build": "NODE_ENV=production parcel build --experimental-scope-hoisting src/manifest.json && cp -f lib/* dist",
+    "build": "parcel build --experimental-scope-hoisting src/manifest.json && cp -f lib/* dist",
+    "build:nop": "parcel build src/manifest.json --no-source-maps",
     "zip": "zip -r extension.zip dist"
   },
   "license": "MIT"
