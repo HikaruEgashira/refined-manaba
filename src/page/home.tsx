@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SerchBar from '../components/SearchBar';
+import SerchBar from '../components/SearchBox';
 import { getCourse, deleteById } from '../usecase';
 
 import { appendBefore } from '../common/dom-utils';
