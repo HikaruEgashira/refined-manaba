@@ -18,7 +18,7 @@
     {
       "run_at": "document_end",
       "matches": ["https://manaba.tsukuba.ac.jp/*"],
-      "js": ["content.ts"],
+      "js": ["content.tsx"],
       "css": []
     }
   ],

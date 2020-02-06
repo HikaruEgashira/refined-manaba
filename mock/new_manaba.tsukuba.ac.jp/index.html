@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://idp.account.tsukuba.ac.jp/idp/profile/SAML2/Redirect/SSO?execution=e1s1 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Unified Authentication System</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://idp.account.tsukuba.ac.jp/idp/css/main.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://idp.account.tsukuba.ac.jp/idp/images/ia-logo.gif"
+          alt="University of Tsukuba"
+        />
+        <h2>Unified Authentication System</h2>
+      </header>
+
+      <main class="content">
+        <section class="column one">
+          <form
+            action="https://idp.account.tsukuba.ac.jp/idp/profile/SAML2/Redirect/SSO?execution=e1s1"
+            method="post"
+          >
+            <legend>
+              Login to University of Tsukuba manaba service
+            </legend>
+
+            <div class="form-element-wrapper">
+              <label for="username">User ID</label>
+              (<a
+                target="_blank"
+                href="http://www.cc.tsukuba.ac.jp/wp/service/account/#utid-13"
+                >UTID-13</a
+              >
+              or
+              <a
+                target="_blank"
+                href="http://www.cc.tsukuba.ac.jp/wp/service/account/#utid-name"
+                >UTID-NAME</a
+              >)
+              <input
+                class="form-element form-field"
+                id="username"
+                name="j_username"
+                type="text"
+                value=""
+              />
+            </div>
+
+            <div class="form-element-wrapper">
+              <label for="password">Password</label>
+              <input
+                class="form-element form-field"
+                id="password"
+                name="j_password"
+                type="password"
+                value=""
+              />
+            </div>
+
+            <div class="form-element-wrapper">
+              <label for="donotcache">
+                <p>
+                  University of Tsukuba [University of Tsukuba manaba service]
+                </p>
+
+                <input
+                  type="checkbox"
+                  name="donotcache"
+                  value="1"
+                  id="donotcache"
+                />
+                Don't Remember Login
+              </label>
+            </div>
+
+            <div class="form-element-wrapper">
+              <button
+                class="form-element form-button"
+                type="submit"
+                name="_eventId_proceed"
+                onclick="this.childNodes[0].nodeValue='Logging in, please wait...';"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+
+          <p>
+            University of Tsukuba manaba service (educational support service)
+          </p>
+        </section>
+        <section class="column two">
+          <ul class="list list-help">
+            <li>
+              このページをブックマークしないでください．
+            </li>
+            <li>
+              (Please do not bookmark this page.)
+            </li>
+            <li>
+              <span style="font-size: x-small">
+                このページに移行する前の，システムごとのURLをブックマークするようにしてください．
+              </span>
+            </li>
+            <li>
+              <span style="font-size: x-small">
+                (Please bookmark system-specific URL before jumping to this
+                page.)
+              </span>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="http://www.cc.tsukuba.ac.jp/wp/idp-login-page/"
+                style="color:#00f"
+                >統一認証システムのログイン画面の変更について</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="http://www.cc.tsukuba.ac.jp/wp_e/idp-login-page/"
+                style="color:#00f"
+                >(On the Change of the Layout of the Login Page of the Unified
+                Authentication System)</a
+              >
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

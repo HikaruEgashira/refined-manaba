@@ -2,8 +2,16 @@
   "extends": "@sindresorhus/tsconfig",
   "compilerOptions": {
     "target": "es2018",
+    "module": "es6",
     "declaration": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   },
-  "include": ["src", "webpack.config.ts"]
+  "include": ["src"]
 }
