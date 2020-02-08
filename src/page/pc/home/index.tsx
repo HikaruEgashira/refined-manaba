@@ -1,10 +1,10 @@
 import { validation } from './validation';
 
 import SearchBoxFeature from './SearchBox';
-import DelUnusedComponents from './delUnusedComponents';
+import DelUnusedComponentsFeature from './delUnusedComponents';
 
 const run = () => {
-  DelUnusedComponents();
+  DelUnusedComponentsFeature();
   SearchBoxFeature();
 };
 
