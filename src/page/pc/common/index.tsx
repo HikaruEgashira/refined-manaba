@@ -9,10 +9,8 @@ const run = () => {
     'https://manaba.tsukuba.ac.jp/ct/home',
     'https://manaba.tsukuba.ac.jp/ct/home_?chglistformat=list'
   ];
-  redirect(
-    home,
-    `https://manaba.tsukuba.ac.jp/ct/home___y${year}?chglistformat=list`
-  );
+  const to = `https://manaba.tsukuba.ac.jp/ct/home___y${year()}?chglistformat=list`;
+  redirect(home, to);
 };
 
 const validLocation = true;
