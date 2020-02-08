@@ -3,9 +3,7 @@ export const gotoCourse = (
   changedItem: string
 ) => {
   const courseLink = items.find(({ name }) => name === changedItem)?.href;
-  if (courseLink === undefined) {
-    return;
-  }
+  if (courseLink === undefined) return;
 
   location.href = courseLink;
 };

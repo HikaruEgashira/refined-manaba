@@ -4,7 +4,6 @@
     "chrome": "^0.1.0",
     "delegate-it": "^1.1.0",
     "evergreen-ui": "^4.23.0",
-    "fp-ts": "^2.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "select-dom": "^6.0.0",
@@ -24,8 +23,8 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development parcel watch --no-hmr src/manifest.json",
-    "build": "parcel build --experimental-scope-hoisting src/manifest.json && cp -f lib/* dist",
-    "build:nop": "parcel build src/manifest.json --no-source-maps",
+    "build": "NODE_ENV=production parcel build --experimental-scope-hoisting src/manifest.json && cp -f lib/* dist",
+    "build:d-undef": "NODE_ENV=production parcel build src/manifest.json --no-source-maps",
     "zip": "zip -r extension.zip dist"
   },
   "license": "MIT"

@@ -62,6 +62,12 @@ export const isEditable = (node: unknown): boolean => {
   );
 };
 
+/**
+ * frequencyごとにselectorが存在するか調べる
+ * あればそのHTMLElementを返す
+ * @param selector select-dom
+ * @param frequency ms
+ */
 export async function elementFinder<T extends HTMLElement = HTMLElement>(
   selector: string,
   frequency: number

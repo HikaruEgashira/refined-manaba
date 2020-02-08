@@ -1,3 +1,6 @@
-export { getCourse } from './getCourse';
-export { deleteById } from './deleteById';
-export { gotoCourse } from './gotoCourse';
+export * from './getCourse';
+export * from './deleteDom';
+export * from './gotoCourse';
+export * from './redirect';
+export * from './getYear';
+export * from './page-detect';

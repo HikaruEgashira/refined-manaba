@@ -1,6 +1,6 @@
 import React from 'react';
 import { Autocomplete, TextInput, Pane } from 'evergreen-ui';
-import { gotoCourse } from '../usecase';
+import { gotoCourse } from '../../../usecase';
 
 type Props = {
   children?: string;

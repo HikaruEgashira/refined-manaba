@@ -8,8 +8,14 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["https://manaba.tsukuba.ac.jp/*"],
-      "js": ["content.ts"],
+      "matches": ["https://manaba.tsukuba.ac.jp/ct/*"],
+      "js": ["page/pc/index.ts"],
+      "css": []
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["https://manaba.tsukuba.ac.jp/s/*"],
+      "js": ["page/sp/index.ts"],
       "css": []
     }
   ]
