@@ -1,21 +1,22 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Autocomplete, TextInput, Pane } from 'evergreen-ui';
-import { gotoCourse } from '../../../usecase';
+import { gotoCourse, getCourse } from '../../../usecase';
+import { appendBefore } from '../../../common/dom-utils';
 
 type Props = {
   children?: string;
-  items: { name: string; href: string }[];
   placeholder: string;
 };
 
 const Searchbox: React.FC<Props> = reactProps => {
+  const items = getCourse;
+
   return (
     <Pane padding={16}>
       <Autocomplete
-        items={reactProps.items.map(i => i.name)}
-        onChange={(changedItem: string) =>
-          gotoCourse(reactProps.items, changedItem)
-        }
+        items={items.map(i => i.name)}
+        onChange={(changedItem: string) => gotoCourse(items, changedItem)}
       >
         {props => {
           const { getInputProps, getRef, inputValue, openMenu } = props;
@@ -34,4 +35,8 @@ const Searchbox: React.FC<Props> = reactProps => {
   );
 };
 
-export default Searchbox;
+export default () => {
+  const react = document.createElement('div');
+  appendBefore('.my-course', 'div', react);
+  ReactDOM.render(<Searchbox placeholder="科目検索" />, react);
+};

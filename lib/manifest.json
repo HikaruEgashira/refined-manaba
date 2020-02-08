@@ -5,17 +5,18 @@
   "description": "🍌 Browser extension that simplifies the manaba interface and adds useful features",
   "homepage_url": "https://github.com/HikaruEgashira/refined-manaba",
   "permissions": [],
-  "background": {
-    "scripts": ["browser-polyfill.min.js", "background.js"],
-    "persistent": false
-  },
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["https://manaba.tsukuba.ac.jp/*"],
-      "js": ["browser-polyfill.min.js", "content.js"],
+      "matches": ["https://manaba.tsukuba.ac.jp/ct/*"],
+      "js": ["browser-polyfill.min.js", "pc.js"],
+      "css": []
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["https://manaba.tsukuba.ac.jp/s/*"],
+      "js": ["browser-polyfill.min.js", "sp.js"],
       "css": []
     }
-  ],
-  "web_accessible_resources": ["resolve_conflicts.js"]
+  ]
 }

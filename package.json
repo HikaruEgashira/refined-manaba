@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "axios": "^0.19.1",
     "chrome": "^0.1.0",
     "delegate-it": "^1.1.0",
     "evergreen-ui": "^4.23.0",
@@ -12,20 +11,27 @@
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.7.0",
     "@types/chrome": "^0.0.93",
+    "@types/copy-webpack-plugin": "^5.0.0",
     "@types/node": "^13.1.5",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^4.4.2",
-    "parcel-plugin-web-extension": "^1.6.1",
+    "@types/terser-webpack-plugin": "^2.2.0",
+    "@types/webpack": "^4.41.5",
+    "copy-webpack-plugin": "^5.1.1",
+    "terser-webpack-plugin": "^2.3.4",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
     "typescript-styled-plugin": "^0.15.0",
-    "webextension-polyfill-ts": "^0.12.0"
+    "webextension-polyfill-ts": "^0.12.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "dev": "NODE_ENV=development parcel watch --no-hmr src/manifest.json",
-    "build": "NODE_ENV=production parcel build --experimental-scope-hoisting src/manifest.json && cp -f lib/* dist",
-    "build:d-undef": "NODE_ENV=production parcel build src/manifest.json --no-source-maps",
-    "zip": "zip -r extension.zip dist"
+    "webpack": "webpack --mode=production",
+    "webpack:watch": "webpack -w --mode=development",
+    "zip": "zip -r dist/extension.zip dist"
   },
   "license": "MIT"
 }
