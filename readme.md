@@ -4,6 +4,8 @@
 
 manaba の突っ込みどころを解消する取り組み
 
+![](docs/screenshot.png)
+
 ## 特徴
 
 - 科目の検索機能
@@ -12,11 +14,12 @@ manaba の突っ込みどころを解消する取り組み
 
 ## アーキテクチャ
 
+```
 usecase
-=> page サブ
 => page/(pc|sp)/page/\*feature
 => page/(pc|sp)/page/index.ts
 => page/(pc|sp)/index.ts
+```
 
 ## 参考
 
