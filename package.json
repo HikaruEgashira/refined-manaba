@@ -31,7 +31,7 @@
   "scripts": {
     "webpack": "webpack --mode=production",
     "webpack:watch": "webpack -w --mode=development",
-    "zip": "zip -r dist/extension.zip dist"
+    "zip": "zip -r lib/extension.zip dist"
   },
   "license": "MIT"
 }

@@ -3,10 +3,12 @@
  */
 import { validation } from './validation';
 
-import redirectFeature from './redirectFeature';
+import redirectFeature from './redirect';
+import ellipsisFeature from './ellipsis';
 
 const run = () => {
   redirectFeature();
+  ellipsisFeature();
 };
 
 export const init = () => {

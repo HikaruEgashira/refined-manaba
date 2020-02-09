@@ -13,7 +13,7 @@ const Searchbox: React.FC<Props> = reactProps => {
   const items = getCourse;
 
   return (
-    <Pane padding={16}>
+    <Pane paddingTop={16} paddingBottom={12}>
       <Autocomplete
         items={items.map(i => i.name)}
         onChange={(changedItem: string) => gotoCourse(items, changedItem)}
@@ -37,6 +37,6 @@ const Searchbox: React.FC<Props> = reactProps => {
 
 export default () => {
   const react = document.createElement('div');
-  appendBefore('.my-course', 'div', react);
+  appendBefore('.contentbody-left', 'div', react);
   ReactDOM.render(<Searchbox placeholder="科目検索" />, react);
 };

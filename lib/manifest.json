@@ -9,14 +9,12 @@
     {
       "run_at": "document_end",
       "matches": ["https://manaba.tsukuba.ac.jp/ct/*"],
-      "js": ["browser-polyfill.min.js", "pc.js"],
-      "css": []
+      "js": ["browser-polyfill.min.js", "pc.js"]
     },
     {
       "run_at": "document_end",
       "matches": ["https://manaba.tsukuba.ac.jp/s/*"],
-      "js": ["browser-polyfill.min.js", "sp.js"],
-      "css": []
+      "js": ["browser-polyfill.min.js", "sp.js"]
     }
   ]
 }
